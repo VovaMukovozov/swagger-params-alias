@@ -1,0 +1,37 @@
+{
+  "name": "swagger-params-alias",
+  "version": "1.0.0",
+  "description": "a reusable pipe-fitting to be used with swagger-node-runner projects, allows giving aliases to parameters",
+  "main": "lib",
+  "scripts": {
+    "test": "mocha",
+    "prepush": "mocha",
+    "cover-run": "istanbul cover --dir ./coverage/unit-test node_modules/mocha/bin/_mocha test -- --reporter dot",
+    "cover-combined": "istanbul report --root ./coverage --dir ./coverage/combined --format html",
+    "cover": "npm run cover-run && npm run cover-combined",
+    "cover-enforce": "node node_modules/istanbul/lib/cli.js check-coverage --lines 85 --function 85 --branches 80"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.mobimate.local/worldmate/swagger-params-alias"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osher/swagger-params-alias/issues"
+  },
+  "homepage": "https://github.com/osher/swagger-params-alias#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "connect": "^3.5.0",
+    "husky": "^0.11.3",
+    "istanbul": "*",
+    "mocha": "~2.3.4",
+    "mocha-ui-exports": "^1.0.1",
+    "mocha-ui-exports-request": "^1.2.0",
+    "should": "^11.1.1",
+    "swagger-connect": "^0.7.0"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.com/"
+  }
+}
